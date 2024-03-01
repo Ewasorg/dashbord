@@ -1,0 +1,219 @@
+/* Cairo Font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+/* ===== BASE ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+/**********************\
+    - Form Add
+\**********************/
+
+/* ===== Body ===== */
+
+body {
+    background-color: var(--black-color);
+    background-image:
+    url('../img/hero-bg.png'),
+    linear-gradient(90deg , hsl(231, 68%, 21%) 0, hsl(275, 54%, 33%) 51% , hsl(231, 68%, 21%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px;
+
+}
+/* ===== Form ===== */
+.form-container{
+    width: 1000px;
+    height: 850px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    margin-top: 150px;
+    box-shadow:
+        5px 5px 20px rgba(3, 232, 244, 0.11),
+        5px 5px 20px rgba(3, 232, 244, 0.11),
+        5px 5px 20px rgba(3, 232, 244, 0.11),
+        5px 5px 20px rgba(3, 232, 244, 0.11);
+    margin-bottom: 30px;
+}
+.form-container header {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 4vm;
+    transition: .3s;
+}
+.col{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== Frist Colmin ===== */
+/* .col-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    border-radius: 20px 0% 0% 20px;
+    transition: border-radius .3s;
+} */
+.col-1{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 0px 20px 20px 20px;
+    transition: border-radius .3s;
+}
+
+/* ===== Second Colmin ===== */
+.col-2{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+.admin-form{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 4vm;
+    transition: .3s;
+}
+
+.form-title{
+    margin: 40px 0;
+    color: #2ECCC5;
+    font-size: 28px;
+    font-weight: 800;
+    padding: 0 10px;
+    border-radius: 5px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.1),
+        5px 5px 20px rgba(0, 0, 0, 0.1),
+        5px 5px 30px rgba(0, 0, 0, 0.1),
+        5px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.col-1 .form-char{
+    margin: 20px 0;
+    color: #B23AA7;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 0 10px;
+    border-radius: 5px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.1),
+        5px 5px 20px rgba(0, 0, 0, 0.1),
+        5px 5px 30px rgba(0, 0, 0, 0.1),
+        5px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.col-2 .form-char{
+    margin: 20px 0;
+    color: #3366FF;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 0 10px;
+    border-radius: 5px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.1),
+        5px 5px 20px rgba(0, 0, 0, 0.1),
+        5px 5px 30px rgba(0, 0, 0, 0.1),
+        5px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .form-container {
+        max-width: 600px;   
+        margin-inline: auto;
+    }
+    
+    .col-1 {
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+    }
+
+    .col-2 {
+        width: 50%;
+    }
+
+    .form-title {
+        margin-top: 30px 0;
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 992px){
+    .form-container{
+        max-width: 600px;
+    }
+    .col-1{
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+        width: 50%;
+    }
+    .col-2{
+        width: 50%;
+    }
+    
+    .form-title {
+        margin: 20px 0;
+        font-size: 28px;
+        font-weight: 800;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-container {
+        max-width: 1000px;
+    }
+
+    .col-1 {
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+        width: 50%;
+    }
+
+    .col-2 {
+        width: 50%;
+    }
+
+    .form-title {
+        margin: 25px 0;
+        font-size: 28px;
+        font-weight: 800;
+    }
+}
